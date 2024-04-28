@@ -21,3 +21,7 @@ dataset$Salary = ifelse(
 dataset$Country = factor(dataset$Country,
                          levels = c('France', 'Spain', 'Germany'), # c is a vector. This is a vector of 3 elements
                          labels = c(1, 2, 3))
+
+dataset$Purchased = factor(dataset$Purchased,
+                         levels = c('No', 'Yes'), # c is a vector. This is a vector of 3 elements
+                         labels = c(0, 1))
