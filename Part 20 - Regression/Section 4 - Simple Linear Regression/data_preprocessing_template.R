@@ -1,0 +1,19 @@
+# Linear Regression
+
+# We want to know if there is a linear correlation between these two variables (years experience & salary)
+# Independent variable is the years experience. Dependent is salary
+dataset = read.csv('Salary_Data.csv')
+
+
+
+# Splitting the dataset into the Training set and Test set
+# install.packages('caTools')
+library(caTools)
+set.seed(123)
+split = sample.split(dataset$DependentVariable, SplitRatio = 0.8)
+training_set = subset(dataset, split == TRUE)
+test_set = subset(dataset, split == FALSE)
+
+# Feature Scaling
+# training_set = scale(training_set)
+# test_set = scale(test_set)
