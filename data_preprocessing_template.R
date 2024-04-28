@@ -16,3 +16,8 @@ dataset$Salary = ifelse(
   ave(dataset$Salary, FUN = function(x) mean(x, na.rm = TRUE)),
   dataset$Salary
 )
+
+# Encoding categorical data to numbers/factors (since text isn't compatible for crunching numbers)
+dataset$Country = factor(dataset$Country,
+                         levels = c('France', 'Spain', 'Germany'), # c is a vector. This is a vector of 3 elements
+                         labels = c(1, 2, 3))
