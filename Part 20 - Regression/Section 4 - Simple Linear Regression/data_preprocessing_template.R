@@ -18,3 +18,6 @@ test_set = subset(dataset, split == FALSE)
 
 regressor = lm(formula = Salary ~ YearsExperience,
                data = training_set)
+
+# Now, we use the regressor to predict what the salary would be based on the test set of yearsexperience
+y_pred = predict(regressor, newdata = test_set)
