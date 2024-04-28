@@ -27,3 +27,10 @@ dataset$Purchased = factor(dataset$Purchased,
                          labels = c(0, 1))
 
 # Split data into training set and test set. caTools library will be used
+# install.packages("caTools")
+set.seed(123)
+# Creates an array. Each index to a record of the dataset. True means membership to training set, false for test set
+split = sample.split(dataset$Purchased, SplitRatio = 0.8)
+
+training_set = subset(dataset, split == TRUE)
+test_set = subset(dataset, split == FALSE)
