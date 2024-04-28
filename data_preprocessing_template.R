@@ -25,3 +25,5 @@ dataset$Country = factor(dataset$Country,
 dataset$Purchased = factor(dataset$Purchased,
                          levels = c('No', 'Yes'), # c is a vector. This is a vector of 3 elements
                          labels = c(0, 1))
+
+# Split data into training set and test set. caTools library will be used
